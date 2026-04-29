@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>小兔鲜儿 - 新鲜、惠民、快捷！</title>
+    <!-- 引入外部样式表 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 页面头部：Logo + 我的学号姓名 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-area">
+                <div class="logo">小兔<span>鲜儿</span></div>
+                <!-- 学号姓名固定显示，符合任务要求 -->
+                <div class="student-badge">学号：24215220110 | 李镕妍</div>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">新鲜好物</a></li>
+                    <li><a href="#">人气推荐</a></li>
+                    <li><a href="#">热门品牌</a></li>
+                    <li><a href="#">最新专题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- 新增轮播图板块 -->
+<div class="carousel-container">
+    <div class="carousel">
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide" style="background-image: url('images/01.png');"></div>
+            <div class="carousel-slide" style="background-image: url('images/02.png');"></div>
+        </div>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </div>
+</div>
+            <!-- 1. 新鲜好物板块 -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>新鲜好物</h2>
+                    <a href="#" class="more-link">查看全部 →</a>
+                </div>
+                <div class="goods-grid">
+                    <!-- 商品卡片 1 -->
+                    <div class="goods-card">
+                        <div class="card-img" style="background-image: url('images/1.png');"></div>
+                        <div class="card-info">
+                            <h3 class="goods-title">KN95级莫兰迪色防护口罩</h3>
+                            <p class="goods-desc">KN95级莫兰迪色防护口罩</p>
+                            <span class="price">¥79</span>
+                        </div>
+                    </div>
+                    <!-- 商品卡片 2 -->
+                    <div class="goods-card">
+                        <div class="card-img" style="background-image: url('images/2.png');"></div>
+                        <div class="card-info">
+                            <h3 class="goods-title">紫檀外独板三层普洱茶盒</h3>
+                            <p class="goods-desc">紫檀外独板三层普洱茶盒</p>
+                            <span class="price">¥569</span>
+                        </div>
+                    </div>
+                    <!-- 商品卡片 3 -->
+                    <div class="goods-card">
+                        <div class="card-img" style="background-image: url('images/3.png');"></div>
+                        <div class="card-info">
+                            <h3 class="goods-title">科技布布艺沙发</h3>
+                            <p class="goods-desc">科技布布艺沙发</p>
+                            <span class="price">¥3569</span>
+                        </div>
+                    </div>
+                    <!-- 商品卡片 4 -->
+                    <div class="goods-card">
+                        <div class="card-img" style="background-image: url('images/4.png');"></div>
+                        <div class="card-info">
+                            <h3 class="goods-title">法拉蒙高颜值记事本可定制</h3>
+                            <p class="goods-desc">法拉蒙高颜值记事本可定制</p>
+                            <span class="price">¥48</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. 人气推荐板块 -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>人气推荐</h2>
+                    <a href="#" class="more-link">查看全部 →</a>
+                </div>
+                <div class="goods-grid">
+                    <!-- 商品卡片 5 -->
+                    <div class="goods-card">
+                        <div class="card-img" style="background-image: url('images/5.png');"></div>
+                        <div class="card-info">
+                            <h3 class="goods-title">特惠推荐</h3>
+                            <p class="goods-desc">我猜得到 你的需要</p>
+                        </div>
+                    </div>
+                    <!-- 商品卡片 6 -->
+                    <div class="goods-card">
+                        <div class="card-img" style="background-image: url('images/6.png');"></div>
+                        <div class="card-info">
+                            <h3 class="goods-title">爆款推荐</h3>
+                            <p class="goods-desc">人气好物推荐</p>
+                        </div>
+                    </div>
+                    <!-- 商品卡片 7 -->
+                    <div class="goods-card">
+                        <div class="card-img" style="background-image: url('images/7.png');"></div>
+                        <div class="card-info">
+                            <h3 class="goods-title">节日礼品一站买全</h3>
+                            <p class="goods-desc">编辑尽心整理推荐</p>
+                        </div>
+                    </div>
+                    <!-- 商品卡片 8 -->
+                    <div class="goods-card">
+                        <div class="card-img" style="background-image: url('images/8.png');"></div>
+                        <div class="card-info">
+                            <h3 class="goods-title">鲜花园艺</h3>
+                            <p class="goods-desc">给生活增加仪式感</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 热门品牌 - 五张并排图片 -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>热门品牌</h2>
+                    <a href="#" class="more-link">查看全部 →</a>
+                </div>
+                <div class="brands-grid">
+                    <div class="brand-card">
+                        <div class="brand-img" style="background-image: url('images/hot1.png');"></div>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-img" style="background-image: url('images/hot2.png');"></div>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-img" style="background-image: url('images/hot3.png');"></div>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-img" style="background-image: url('images/hot4.png');"></div>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-img" style="background-image: url('images/hot5.png');"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 生鲜板块 -->
+<div class="section fresh-section">
+    <div class="section-header">
+        <h2>生鲜</h2>
+        <a href="#" class="more-link">查看全部 →</a>
+    </div>
+    
+    <div class="fresh-layout">
+        <!-- 左侧：生鲜馆宣传区 -->
+        <div class="fresh-promo">
+            <div class="promo-tagline">高温蒸煮</div>
+            <div class="promo-title">牢牢锁住板栗原香</div>
+            <div class="promo-badge">生鲜馆</div>
+            <div class="promo-discount">全场3件8折</div>
+            <a href="#" class="promo-btn">立即抢购 →</a>
+        </div>
+        
+        <!-- 右侧：商品网格 -->
+        <div class="fresh-goods-grid">
+            <!-- 商品1 -->
+            <div class="fresh-card">
+                <div class="fresh-card-img" style="background-image: url('images/fresh1.png');"></div>
+                <div class="fresh-card-info">
+                    <h4 class="fresh-title">双味千层，手抓饼烤肉组合</h4>
+                    <p class="fresh-spec">240g/袋 4片装</p>
+                    <p class="fresh-desc">加热即食</p>
+                    <span class="fresh-price">¥ 89.99</span>
+                </div>
+            </div>
+            <!-- 商品2 -->
+            <div class="fresh-card">
+                <div class="fresh-card-img" style="background-image: url('images/fresh2.png');"></div>
+                <div class="fresh-card-info">
+                    <h4 class="fresh-title">云南甘蔗慢熬红糖馒头</h4>
+                    <p class="fresh-spec">220g/袋 5个装</p>
+                    <p class="fresh-desc">加热即食</p>
+                    <span class="fresh-price">¥ 9.99</span>
+                </div>
+            </div>
+            <!-- 商品3 -->
+            <div class="fresh-card">
+                <div class="fresh-card-img" style="background-image: url('images/fresh3.png');"></div>
+                <div class="fresh-card-info">
+                    <h4 class="fresh-title">日式风味小圆饼</h4>
+                    <p class="fresh-spec">圆形【海盐味】</p>
+                    <p class="fresh-desc">糖果零食</p>
+                    <span class="fresh-price">¥ 588.00</span>
+                </div>
+            </div>
+            <!-- 商品4 -->
+            <div class="fresh-card">
+                <div class="fresh-card-img" style="background-image: url('images/fresh4.png');"></div>
+                <div class="fresh-card-info">
+                    <h4 class="fresh-title">全麦奶油浓香小面包</h4>
+                    <p class="fresh-spec">50g*12袋</p>
+                    <p class="fresh-desc">美味西点</p>
+                    <span class="fresh-price">¥ 69.00</span>
+                </div>
+            </div>
+            <!-- 商品5 -->
+            <div class="fresh-card">
+                <div class="fresh-card-img" style="background-image: url('images/fresh5.png');"></div>
+                <div class="fresh-card-info">
+                    <h4 class="fresh-title">秘制外皮五福摩提大福点心</h4>
+                    <p class="fresh-spec">150g/盒</p>
+                    <p class="fresh-desc">美味西点</p>
+                    <span class="fresh-price">¥ 39.99</span>
+                </div>
+            </div>
+            <!-- 商品6 -->
+            <div class="fresh-card">
+                <div class="fresh-card-img" style="background-image: url('images/fresh6.png');"></div>
+                <div class="fresh-card-info">
+                    <h4 class="fresh-title">水果面膜韩国蜂蜜柚子茶</h4>
+                    <p class="fresh-spec">560g/瓶</p>
+                    <p class="fresh-desc">冲调饮品</p>
+                    <span class="fresh-price">¥ 89.99</span>
+                </div>
+            </div>
+            <!-- 商品7 -->
+            <div class="fresh-card">
+                <div class="fresh-card-img" style="background-image: url('images/fresh7.png');"></div>
+                <div class="fresh-card-info">
+                    <h4 class="fresh-title">浓情意心口弥漫</h4>
+                    <p class="fresh-spec">205克/盒</p>
+                    <p class="fresh-desc">糖果零食</p>
+                    <span class="fresh-price">¥ 120.00</span>
+                </div>
+            </div>
+            <!-- 商品8 -->
+            <div class="fresh-card">
+                <div class="fresh-card-img" style="background-image: url('images/fresh8.png');"></div>
+                <div class="fresh-card-info">
+                    <h4 class="fresh-title">抹茶奶油小蛋糕礼盒装</h4>
+                    <p class="fresh-spec">220克/盒</p>
+                    <p class="fresh-desc">美味西点</p>
+                    <span class="fresh-price">¥ 60.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 服装板块 -->
+<div class="section clothing-section">
+    <div class="section-header">
+        <h2>服装</h2>
+        <a href="#" class="more-link">查看全部 →</a>
+    </div>
+    
+    <div class="clothing-layout">
+        <!-- 左侧：服饰馆宣传区 -->
+        <div class="clothing-promo">
+            <div class="promo-tagline">服装</div>
+            <div class="promo-title">服饰馆</div>
+            <div class="promo-discount">3折起狂欢</div>
+            <a href="#" class="promo-btn">立即抢购 →</a>
+        </div>
+        
+        <!-- 右侧：商品网格 -->
+        <div class="clothing-goods-grid">
+    <!-- 商品1：轻弹缓震网面运动鞋 -->
+    <div class="clothing-card">
+        <div class="clothing-card-img" style="background-image: url('images/clothes1.png');"></div>
+        <div class="clothing-card-info">
+            <h4 class="clothing-title">轻弹缓震网面运动鞋</h4>
+            <p class="clothing-spec">不闷汗 夏天穿也清爽</p>
+            <p class="clothing-desc">经典款不过时</p>
+            <span class="clothing-price">¥ 139.00</span>
+        </div>
+    </div>
+    
+    <!-- 商品2：法式温柔风针织开衫 -->
+    <div class="clothing-card">
+        <div class="clothing-card-img" style="background-image: url('images/clothes2.png');"></div>
+        <div class="clothing-card-info">
+            <h4 class="clothing-title">法式温柔风针织开衫</h4>
+            <p class="clothing-spec">软糯质感 春日氛围感</p>
+            <p class="clothing-desc">仙女系穿搭</p>
+            <span class="clothing-price">¥ 169.00</span>
+        </div>
+    </div>
+    <!-- 商品3：坑条修身针织打底衫 --> 
+     <div class="clothing-card">
+        <div class="clothing-card-img" style="background-image: url('images/clothes3.png');"></div>
+        <div class="clothing-card-info">
+            <h4 class="clothing-title">	坑条修身针织打底衫</h4>
+            <p class="clothing-spec">弹力包裹 上身显瘦5斤</p>
+            <p class="clothing-desc">遮肉神器</p>
+            <span class="clothing-price">¥ 99.00</span>
+        </div>
+    </div>
+    
+    <!-- 商品4：水果派对提花棉袜 -->
+    <div class="clothing-card">
+        <div class="clothing-card-img" style="background-image: url('images/clothes4.png');"></div>
+        <div class="clothing-card-info">
+            <h4 class="clothing-title">水果派对提花棉袜</h4>
+            <p class="clothing-spec">缤纷配色 点亮心情</p>
+            <p class="clothing-desc">春夏穿搭</p>
+            <span class="clothing-price">¥ 19.00</span>
+        </div>
+    </div>
+    <!-- 商品5：极简收腰短袖衬衫裙 -->
+<div class="clothing-card">
+        <div class="clothing-card-img" style="background-image: url('images/clothes5.png');"></div>
+        <div class="clothing-card-info">
+            <h4 class="clothing-title">极简收腰短袖衬衫裙</h4>
+            <p class="clothing-spec">显瘦遮胯 一件出门不用搭</p>
+            <p class="clothing-desc">通勤/约会/逛街</p>
+            <span class="clothing-price">¥ 219.00</span>
+        </div>
+    </div>
+    <!-- 商品6：复古哑光真皮腰带 --><div class="clothing-card">
+        <div class="clothing-card-img" style="background-image: url('images/clothes6.png');"></div>
+        <div class="clothing-card-info">
+            <h4 class="clothing-title">复古哑光真皮腰带</h4>
+            <p class="clothing-spec">越用越亮 绝不开裂</p>
+            <p class="clothing-desc">商务通勤必备</p>
+            <span class="clothing-price">¥ 79.00</span>
+        </div>
+    </div>
+    
+    <!-- 商品7：经典高帮帆布鞋 -->
+    <div class="clothing-card">
+        <div class="clothing-card-img" style="background-image: url('images/clothes7.png');"></div>
+        <div class="clothing-card-info">
+            <h4 class="clothing-title">经典高帮帆布鞋</h4>
+            <p class="clothing-spec">透气不闷脚 日系文艺范</p>
+            <p class="clothing-desc">四季百搭</p>
+            <span class="clothing-price">¥ 89.00</span>
+        </div>
+    </div>
+    <!-- 商品8：四面弹抗皱休闲裤 -->
+    <div class="clothing-card">
+        <div class="clothing-card-img" style="background-image: url('images/clothes8.png');"></div>
+        <div class="clothing-card-info">
+            <h4 class="clothing-title">四面弹抗皱休闲裤</h4>
+            <p class="clothing-spec">久坐不皱 挺括有型</p>
+            <p class="clothing-desc">通勤 / 商务</p>
+            <span class="clothing-price">¥ 159.00</span>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<!-- 餐厨板块 -->
+<div class="section kitchen-section">
+    <div class="section-header">
+        <h2>餐厨</h2>
+        <a href="#" class="more-link">查看全部 →</a>
+    </div>
+    
+    <div class="kitchen-layout">
+        <!-- 左侧：餐厨馆宣传区 -->
+        <div class="kitchen-promo">
+            <div class="promo-tagline">品质厨具</div>
+            <div class="promo-title">让烹饪成为享受</div>
+            <div class="promo-badge">餐厨馆</div>
+            <div class="promo-discount">3折起狂欢</div>
+            <a href="#" class="promo-btn">立即抢购 →</a>
+        </div>
+        
+        <!-- 右侧：商品网格 -->
+        <div class="kitchen-goods-grid">
+            <!-- 商品1 陶土色碗-->
+            <div class="kitchen-card">
+                <div class="kitchen-card-img" style="background-image: url('images/kitchen1.png');"></div>
+                <div class="kitchen-card-info">
+                    <h4 class="kitchen-title">陶土色碗</h4>
+                    <p class="kitchen-spec">复古质感 手工釉面</p>
+                    <p class="kitchen-desc">盛饭喝汤皆宜</p>
+                    <span class="kitchen-price">¥ 19.00</span>
+                </div>
+            </div>
+            <!-- 商品2 透明水果盘-->
+            <div class="kitchen-card">
+                <div class="kitchen-card-img" style="background-image: url('images/kitchen2.png');"></div>
+                <div class="kitchen-card-info">
+                    <h4 class="kitchen-title">透明水果盘</h4>
+                    <p class="kitchen-spec">晶莹剔透 一物多用</p>
+                    <p class="kitchen-desc">沙拉/水果/干果</p>
+                    <span class="kitchen-price">¥ 19.00</span>
+                </div>
+            </div>
+            <!-- 商品3 小型搅拌器-->
+            <div class="kitchen-card">
+                <div class="kitchen-card-img" style="background-image: url('images/kitchen3.png');"></div>
+                <div class="kitchen-card-info">
+                    <h4 class="kitchen-title">小型搅拌器</h4>
+                    <p class="kitchen-spec">一按即转 轻巧便携</p>
+                    <p class="kitchen-desc">打发/混合/辅食</p>
+                    <span class="kitchen-price">¥ 12.00</span>
+                </div>
+            </div>
+            <!-- 商品4 保温壶-->
+            <div class="kitchen-card">
+                <div class="kitchen-card-img" style="background-image: url('images/kitchen4.png');"></div>
+                <div class="kitchen-card-info">
+                    <h4 class="kitchen-title">保温壶</h4>
+                    <p class="kitchen-spec">长效保温 冷热皆宜</p>
+                    <p class="kitchen-desc">大容量</p>
+                    <span class="kitchen-price">¥ 148.00</span>
+                </div>
+            </div>
+            <!-- 商品5 青色碗碟-->
+            <div class="kitchen-card">
+                <div class="kitchen-card-img" style="background-image: url('images/kitchen5.png');"></div>
+                <div class="kitchen-card-info">
+                    <h4 class="kitchen-title">青色碗碟</h4>
+                    <p class="kitchen-spec">日式清新 釉下彩</p>
+                    <p class="kitchen-desc">一套4件 套装</p>
+                    <span class="kitchen-price">¥ 79.00</span>
+                </div>
+            </div>
+            <!-- 商品6 戚风蛋糕模具-->
+            <div class="kitchen-card">
+                <div class="kitchen-card-img" style="background-image: url('images/kitchen6.png');"></div>
+                <div class="kitchen-card-info">
+                    <h4 class="kitchen-title">戚风蛋糕模具</h4>
+                    <p class="kitchen-spec">阳极氧化 导热均匀</p>
+                    <p class="kitchen-desc">6寸活底</p>
+                    <span class="kitchen-price">¥ 65.00</span>
+                </div>
+            </div>
+            <!-- 商品7 托盘-->
+            <div class="kitchen-card">
+                <div class="kitchen-card-img" style="background-image: url('images/kitchen7.png');"></div>
+                <div class="kitchen-card-info">
+                    <h4 class="kitchen-title">托盘</h4>
+                    <p class="kitchen-spec">防滑耐磨 端菜稳当</p>
+                    <p class="kitchen-desc">长方形 2色可选</p>
+                    <span class="kitchen-price">¥ 19.99</span>
+                </div>
+            </div>
+            <!-- 商品8 玻璃水杯-->
+            <div class="kitchen-card">
+                <div class="kitchen-card-img" style="background-image: url('images/kitchen8.png');"></div>
+                <div class="kitchen-card-info">
+                    <h4 class="kitchen-title">玻璃水杯</h4>
+                    <p class="kitchen-spec">高硼硅耐热</p>
+                    <p class="kitchen-desc">加厚杯身</p>
+                    <span class="kitchen-price">¥ 69.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 居家板块 -->
+<div class="section home-section">
+    <div class="section-header">
+        <h2>居家</h2>
+        <a href="#" class="more-link">查看全部 →</a>
+    </div>
+    
+    <div class="home-layout">
+        <!-- 左侧：家居馆宣传区 -->
+        <div class="home-promo">
+            <div class="promo-tagline">舒适生活</div>
+            <div class="promo-title">打造温馨之家</div>
+            <div class="promo-badge">家居馆</div>
+            <div class="promo-discount">全场满减</div>
+            <a href="#" class="promo-btn">立即抢购 →</a>
+        </div>
+        
+        <!-- 右侧：商品网格 -->
+        <div class="home-goods-grid">
+            <!-- 商品1 -->
+            <div class="home-card">
+                <div class="home-card-img" style="background-image: url('images/home1.png');"></div>
+                <div class="home-card-info">
+                    <h4 class="home-title">新疆长绒棉四件套</h4>
+                    <p class="home-spec">60支 贡缎工艺</p>
+                    <p class="home-desc">亲肤透气</p>
+                    <span class="home-price">¥ 59.00</span>
+                </div>
+            </div>
+            <!-- 商品2 软萌霸王龙公仔-->
+            <div class="home-card">
+                <div class="home-card-img" style="background-image: url('images/home2.png');"></div>
+                <div class="home-card-info">
+                    <h4 class="home-title">软萌霸王龙公仔</h4>
+                    <p class="home-spec">一秒回到侏罗纪</p>
+                    <p class="home-desc">亲肤短毛绒，抱枕也治愈</p>
+                    <span class="home-price">¥ 39.00</span>
+                </div>
+            </div>
+            <!-- 商品3 几何玻璃水培瓶-->
+            <div class="home-card">
+                <div class="home-card-img" style="background-image: url('images/home3.png');"></div>
+                <div class="home-card-info">
+                    <h4 class="home-title">几何玻璃水培瓶</h4>
+                    <p class="home-spec">看得见的根系美学</p>
+                    <p class="home-desc">清水养绿植，干净又高级</p>
+                    <span class="home-price">¥ 19.90</span>
+                </div>
+            </div>
+            <!-- 商品4 仙女级丝绸发圈-->
+            <div class="home-card">
+                <div class="home-card-img" style="background-image: url('images/home4.png');"></div>
+                <div class="home-card-info">
+                    <h4 class="home-title">仙女级丝绸发圈</h4>
+                    <p class="home-spec">扎出韩剧女主气质</p>
+                    <p class="home-desc">不伤发、不扯发，一扎就有氛围感</p>
+                    <span class="home-price">¥ 29.90</span>
+                </div>
+            </div>
+            <!-- 商品5 轻奢斜口玻璃花瓶-->
+            <div class="home-card">
+                <div class="home-card-img" style="background-image: url('images/home5.png');"></div>
+                <div class="home-card-info">
+                    <h4 class="home-title">轻奢斜口玻璃花瓶</h4>
+                    <p class="home-spec">插一枝也很好看</p>
+                    <p class="home-desc">极简透明，装点你的每一束花</p>
+                    <span class="home-price">¥ 29.90</span>
+                </div>
+            </div>
+            <!-- 商品6 小户型折叠桌-->
+            <div class="home-card">
+                <div class="home-card-img" style="background-image: url('images/home6.png');"></div>
+                <div class="home-card-info">
+                    <h4 class="home-title">小户型折叠桌</h4>
+                    <p class="home-spec">用的时候才打开</p>
+                    <p class="home-desc">免安装，秒收放，租房党刚需</p>
+                    <span class="home-price">¥ 79.00</span>
+                </div>
+            </div>
+            <!-- 商品7 空气凤梨透明罩-->
+            <div class="home-card">
+                <div class="home-card-img" style="background-image: url('images/home7.png');"></div>
+                <div class="home-card-info">
+                    <h4 class="home-title">空气凤梨透明罩</h4>
+                    <p class="home-spec">不用土，不用频繁浇水</p>
+                    <p class="home-desc">懒人植物，放在哪都是一景</p>
+                    <span class="home-price">¥ 29.00</span>
+                </div>
+            </div>
+            <!-- 商品8 手工竹编凉枕-->
+            <div class="home-card">
+                <div class="home-card-img" style="background-image: url('images/home8.png');"></div>
+                <div class="home-card-info">
+                    <h4 class="home-title">手工竹编凉枕</h4>
+                    <p class="home-spec">睡得清凉又安稳</p>
+                    <p class="home-desc">传统手艺，夏日解暑神器</p>
+                    <span class="home-price">¥ 39.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        <!-- 最新专题 - 并排显示 -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>最新专题</h2>
+                    <a href="#" class="more-link">查看全部 →</a>
+                </div>
+                <div class="topics-grid">
+                    <!-- 专题 1 -->
+                    <div class="topic-card">
+                        <div class="topic-img" style="background-image: url('images/9.png');"></div>
+                        <div class="topic-info">
+                            <div class="topic-title">人间烟火</div>
+                            <div class="topic-heart">❤️ 1220</div>
+                        </div>
+                    </div>
+                    <!-- 专题 2 -->
+                    <div class="topic-card">
+                        <div class="topic-img" style="background-image: url('images/10.png');"></div>
+                        <div class="topic-info">
+                            <div class="topic-title">鲜橙一刻</div>
+                            <div class="topic-heart">❤️ 1800</div>
+                        </div>
+                    </div>
+                    <!-- 专题 3 -->
+                    <div class="topic-card">
+                        <div class="topic-img" style="background-image: url('images/11.png');"></div>
+                        <div class="topic-info">
+                            <div class="topic-title">夏日补给</div>
+                            <div class="topic-heart">❤️ 2460</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 页面底部，再次展示学号姓名 -->
+    <footer class="footer">
+    <div class="container">
+        <!-- 新增：二维码区域 + 售后声明 -->
+        <div class="footer-qrcodes">
+            <div class="qrcode-item">
+                <div class="qrcode-img" style="background-image: url('images/wechat.png');"></div>
+                <p>微信公众号</p>
+                <span>扫码关注 获取福利</span>
+            </div>
+            <div class="qrcode-item">
+                <div class="qrcode-img" style="background-image: url('images/app.png');"></div>
+                <p>APP下载</p>
+                <span>扫码下载 领新人券</span>
+            </div>
+            <div class="service-statement">
+                <h4>🔔 售后保障声明</h4>
+                <p>本商城所售商品均为正品，享受7天无理由退货服务。<br>
+                如有质量问题，请在签收后48小时内联系客服处理。<br>
+                客服热线：400-882-6688 | 服务时间：9:00-21:00</p>
+            </div>
+        </div>
+
+        <!-- 原有的版权信息 -->
+        <div class="copyright">
+            <p>© 2026 小兔鲜儿 | 新鲜·惠民·快捷 | 学生作业：李镕妍 24215220110</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+    let slideIndex = 0;
+    const track = document.getElementById('carouselTrack');
+    const slides = document.getElementsByClassName("carousel-slide");
+    const totalSlides = slides.length;
+
+    function showSlide() {
+        const offset = -slideIndex * 100;
+        track.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % totalSlides;
+        showSlide();
+    }
+
+    function prevSlide() {
+        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+        showSlide();
+    }
+
+    // 自动轮播
+    setInterval(() => {
+        nextSlide();
+    }, 4000);
+</script>
+</body>
+</html>
